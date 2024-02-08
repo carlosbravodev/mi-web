@@ -1,0 +1,12 @@
+---
+const { url, logo, titulo } = Astro.props;
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="flex items-center gap-1 border rounded-md py-1 px-2 text-sm sm:text-xl hover:scale-110 transition-transform duration-300 ease-in-out"
+>
+  <img src={logo} alt={`Logo de ${titulo}`} />
+  <h3 class="font-sans font-semibold">{titulo}</h3>
+</a>

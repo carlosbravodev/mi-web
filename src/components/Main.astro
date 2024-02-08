@@ -1,0 +1,49 @@
+---
+import Redes from "./common/Redes.astro";
+---
+
+<main class="h-screen min-h-[500px]">
+  <div
+    class="bg-[url('/fondo-inicio.webp')] absolute top-0 right-0 w-full h-full min-h-[500px] bg-center bg-cover -z-10 bg-no-repeat px-4 brightness-[0.3]"
+  >
+  </div>
+
+  <section
+    class="h-full px-2 flex flex-col justify-evenly items-center lg:absolute lg:top-20 lg:left-0 lg:right-0 lg:max-w-5xl lg:w-full lg:m-auto"
+  >
+    <header class="mt-32">
+      <h2 class="text-3xl font-semibold uppercase font-sans sm:text-5xl">
+        <b class="text-cyan-300 text-3xl font-sans sm:text-5xl">¡</b>Hola<b
+          class="text-cyan-300 text-3xl font-sans sm:text-5xl">!</b
+        >
+        <b class="bg-cyan-300 text-black pt-1 px-2 lowercase sm:text-5xl"
+          >me llamo</b
+        >
+      </h2>
+      <h1 class="font-serif text-5xl sm:text-7xl lg:text-9xl">CARLOS BRAVO</h1>
+      <h3
+        class="font-sans text-sm border text-center w-fit font-light px-2 tracking-[0.45rem] sm:text-xl sm:tracking-[.75rem] lg:tracking-[2rem]"
+      >
+        FULL-STACK DEVELOPER
+      </h3>
+    </header>
+
+    <footer class="flex w-full justify-center items-center space-x-8">
+      <Redes
+        url="../carlosbravodev.pdf"
+        logo="../icons/icono-cv.svg"
+        titulo="Curriculum"
+      />
+      <Redes
+        url="https://www.linkedin.com/in/carlosbravodev/"
+        logo="../icons/icono-linkedin.svg"
+        titulo="Linkedin"
+      />
+      <Redes
+        url="https://github.com/carlosbravodev"
+        logo="../icons/icono-github.svg"
+        titulo="Github"
+      />
+    </footer>
+  </section>
+</main>
