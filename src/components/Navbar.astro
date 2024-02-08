@@ -5,13 +5,13 @@ import { Image } from "astro:assets";
 
 <header
   id="landing-header"
-  class="fixed w-full h-[68px] sm:border-b sm:border-white/50 sm:backdrop-blur-md flex justify-center"
+  class="fixed w-full h-[68px] sm:border-b sm:border-white/50 sm:backdrop-blur-md flex justify-center z-10"
 >
   <div
-    class="flex p-2 items-center top-0 w-full justify-center sm:justify-between z-40 max-w-5xl"
+    class="flex p-2 items-center top-0 w-full justify-center sm:justify-between max-w-5xl"
   >
     <div class="hidden sm:flex pl-4">
-      <a href="/">
+      <a href="#inicio">
         <Image src={logo} alt="Logo de Carlos Bravo" class="w-12 h-12" />
       </a>
     </div>
@@ -22,23 +22,22 @@ import { Image } from "astro:assets";
       <ul
         class="flex justify-between text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-bold [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 md:[&>li>a]:px-4 md:[&>li>a]:py-2"
       >
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Sobre mí</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
 
     <div
       id="menu-backdrop"
       class={`
-        hidden sm:block
-        sm:absolute sm:border sm:backdrop-blur-lg sm:rounded
+        absolute border border-violet-600 sm:backdrop-blur-lg rounded-lg
         translate-x-[var(--left)] translate-y-[var(--top)]
         left-0 top-0
         w-[var(--width)] h-[var(--height)]
         transition-all duration-500
-        ease-in-out opacity-0 -z-10
+        ease-in-out opacity-0 sm:-z-10
       `}
     >
     </div>
@@ -65,6 +64,13 @@ import { Image } from "astro:assets";
     item.addEventListener("mouseleave", () => {
       menuBackDrop.style.opacity = "0";
       menuBackDrop.style.visibility = "hidden";
+    });
+
+    item.addEventListener("click", () => {
+      listItem.forEach((item) => {
+        item.classList.remove("text-violet-600");
+      });
+      item.classList.add("text-violet-600");
     });
   });
 </script>
