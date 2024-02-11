@@ -1,5 +1,5 @@
 ---
-import logo from "../logo.svg";
+import logo from "../../public/favicon.svg";
 import { Image } from "astro:assets";
 ---
 
@@ -22,7 +22,7 @@ import { Image } from "astro:assets";
       <ul
         class="flex justify-between text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]:font-bold [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:py-1 md:[&>li>a]:px-4 md:[&>li>a]:py-2"
       >
-        <li><a href="">Inicio</a></li>
+        <li><a href="#inicio">Inicio</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -32,11 +32,11 @@ import { Image } from "astro:assets";
     <div
       id="menu-backdrop"
       class={`
-        absolute border border-violet-600 sm:backdrop-blur-lg rounded-lg
+        absolute border sm:backdrop-blur-lg rounded-lg
         translate-x-[var(--left)] translate-y-[var(--top)]
         left-0 top-0
         w-[var(--width)] h-[var(--height)]
-        transition-all duration-500
+        transition-all duration-300
         ease-in-out opacity-0 sm:-z-10
       `}
     >
@@ -68,9 +68,9 @@ import { Image } from "astro:assets";
 
     item.addEventListener("click", () => {
       listItem.forEach((item) => {
-        item.classList.remove("text-violet-600");
+        item.classList.remove("bg-white", "rounded-lg", "text-violet-700");
       });
-      item.classList.add("text-violet-600");
+      item.classList.add("bg-white", "rounded-lg", "text-violet-700");
     });
   });
 </script>

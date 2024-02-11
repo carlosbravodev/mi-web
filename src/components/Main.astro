@@ -1,8 +1,12 @@
 ---
 import Redes from "./common/Redes.astro";
+
+import curriculum from "./icons/curriculum.svg";
+import linkedin from "./icons/linkedin.svg";
+import github from "./icons/github.svg";
 ---
 
-<main class="h-screen min-h-[500px]">
+<main class="h-screen min-h-[500px]" id="inicio">
   <div
     class="bg-[url('/fondo-inicio.webp')] absolute top-0 right-0 w-full h-full min-h-[500px] bg-center bg-cover -z-10 bg-no-repeat px-4 brightness-[0.3]"
   >
@@ -31,17 +35,17 @@ import Redes from "./common/Redes.astro";
     <footer class="flex w-full justify-center items-center space-x-8">
       <Redes
         url="../carlosbravodev.pdf"
-        logo="../icons/icono-cv.svg"
+        logo={curriculum}
         titulo="Curriculum"
       />
       <Redes
         url="https://www.linkedin.com/in/carlosbravodev/"
-        logo="../icons/icono-linkedin.svg"
+        logo={linkedin}
         titulo="Linkedin"
       />
       <Redes
         url="https://github.com/carlosbravodev"
-        logo="../icons/icono-github.svg"
+        logo={github}
         titulo="Github"
       />
     </footer>

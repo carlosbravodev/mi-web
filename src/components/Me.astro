@@ -1,0 +1,94 @@
+---
+import EduExp from "./common/EduExp.astro";
+import Tecnologias from "./common/Tecnologias.astro";
+
+import javascript from "./icons/javascript.svg";
+import typescript from "./icons/typescript.svg";
+import bootstrap from "./icons/bootstrap.svg";
+import tailwind from "./icons/tailwindcss.svg";
+import astro from "./icons/astro.svg";
+import node from "./icons/nodejs.svg";
+import express from "./icons/express.svg";
+import mysql from "./icons/mysql.svg";
+import git from "./icons/git.svg";
+import jquery from "./icons/jquery.svg";
+import sass from "./icons/sass.svg";
+import react from "./icons/react.svg";
+---
+
+<section class="max-w-5xl mx-auto p-4 py-10 lg:py-20" id="sobre-mi">
+  <h2
+    class="text-5xl md:text-7xl font-bold font-sans tracking-[-.3rem] text-center"
+  >
+    Sobre mí
+  </h2>
+  <br />
+
+  <p class="font-sans text-sm lg:text-base">
+    ¡De la pasión a la profesión! Mi viaje en el mundo de la tecnología comenzó
+    en 2012 cuando decidí estudiar <b class="text-yellow-200"
+      >Ingeniería en Sistemas Computacionales</b
+    >
+    en la Universidad de Guayaquil (Ecuador). Sin embargo, tras dos años de estudio,
+    la búsqueda de un futuro más prometedor me llevó a emigrar, dejando mi formación
+    en pausa. <br /><br />
+    En 2021, decidí inscribirme en un grado superior de <b
+      class="text-yellow-200">desarrollo de aplicaciones web.</b
+    > A pesar de algunos contratiempos, perseveré y finalmente logré graduarme con
+    sólidos conocimientos en <b class="text-yellow-200"
+      >HTML, CSS, JavaScript y diseño adaptable.</b
+    >
+    <br /><br />
+    Hoy, estoy listo para llevar mi carrera al siguiente nivel. Busco oportunidades
+    para colaborar en proyectos innovadores, aplicar mis habilidades técnicas y contribuir
+    al éxito de la empresa. <b class="text-yellow-200"
+      >Mi objetivo es seguir creciendo como profesional en el campo del
+      desarrollo web,</b
+    > compartiendo mis conocimientos y experiencias para hacer una diferencia en
+    la comunidad tecnológica. <br /><br />
+    ¡Estoy emocionado por lo que el futuro me depara y ansioso por enfrentar nuevos
+    desafíos!
+  </p>
+
+  <section class="mt-16">
+    <h3 class="text-center font-serif text-violet-700 text-3xl mb-8">
+      Educación & Experiencia
+    </h3>
+    <div
+      class="flex flex-col font-sans gap-8 sm:flex-row sm:justify-between sm:gap-16"
+    >
+      <EduExp
+        fecha="MAR 23 - JUN 23"
+        sitio="Webs Empresas, Barcelona"
+        rol="Desarrollador web"
+        techi="php, Bootstrap"
+      />
+      <EduExp
+        fecha="2021-2023"
+        sitio="Instituto MEDAC, Málaga, Andalucía"
+        rol="Desarrollo de Aplicaciones Web"
+      />
+    </div>
+  </section>
+
+  <section class="mt-16">
+    <h3 class="text-center font-serif text-violet-700 text-3xl mb-8">
+      Habilidades
+    </h3>
+
+    <div class="grid grid-cols-3 sm:grid-cols-6 gap-4">
+      <Tecnologias url={javascript} titulo="JavaScript" />
+      <Tecnologias url={typescript} titulo="TypeScript" />
+      <Tecnologias url={react} titulo="React" />
+      <Tecnologias url={tailwind} titulo="Tailwind" />
+      <Tecnologias url={bootstrap} titulo="Bootstrap" />
+      <Tecnologias url={sass} titulo="Sass" />
+      <Tecnologias url={jquery} titulo="jQuery" />
+      <Tecnologias url={astro} titulo="Astro" />
+      <Tecnologias url={node} titulo="Node.js" />
+      <Tecnologias url={express} titulo="Express" />
+      <Tecnologias url={mysql} titulo="MySQL" />
+      <Tecnologias url={git} titulo="Git" />
+    </div>
+  </section>
+</section>
